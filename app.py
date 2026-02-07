@@ -13,13 +13,7 @@ def guardar(data):
     with open(FILE, "w") as f:
         json.dump(data, f, indent=4)
 
-def crear_cliente():
-    nombre = input("Nombre del cliente: ")
-    servicio = input("Servicio contratado: ")
-    data = cargar()
-    data[nombre] = {"servicios": [servicio]}
-    guardar(data)
-    print("Cliente creado correctamente")
+
 
 def modificar_cliente():
     nombre = input("Nombre del cliente: ")
